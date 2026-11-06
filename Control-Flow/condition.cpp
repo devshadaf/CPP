@@ -115,3 +115,27 @@ Month	Season
 //     }
 //     return 0;
 // }
+
+
+// For any 3 digit number check whether it’s an Armstrong number or not.
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int n,digit,copyNumber,sum=0;
+//     cout << "Enter 3 digit number"<<endl;
+//     cin>>n;
+//     copyNumber=n;
+//     while(copyNumber!=0){
+//         digit=copyNumber%10;
+//         copyNumber=copyNumber/10;
+//         sum+=digit*digit*digit;
+//     }
+//     if(sum==n){
+//         cout<< "Armstrong number";
+//     }
+//     else{
+//         cout<< "Not Armstrong number";
+//     }
+//     return 0;
+// }

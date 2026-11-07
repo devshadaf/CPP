@@ -116,6 +116,8 @@
 
 
 // Take a number as input and determine whether it is an Armstrong number or not
+/*An Armstrong number is a number that is equal to the sum of cubes of its digits.*/
+
 // #include <iostream>
 // #include <cmath>
 // using namespace std;
@@ -156,6 +158,65 @@
 //     cout << "Multiplication table for "<< number;
 //     for(int i=0;i<=10;i++){
 //         cout << number << " X " <<i << " = "<< number*i  << "\n";
+//     }
+//     return 0;
+// }
+
+
+// Print the sum of digits of a number using while loop [n=10829]
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int n=10829;
+//     int sum=0,digit;
+//     while(n>0){
+//         digit=n%10;
+//         n/=10;
+//         sum+=digit;
+//     }
+//     cout<< "Sum of the number is : "  <<sum << endl;
+//     return 0;
+// }
+
+// Reverse a given number and print the result [n=10829]
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int n=10829;
+//     int result=0,digit;
+//     while(n>0){
+//         digit=n%10;
+//         n/=10;
+//         result=result*10+digit;
+//     }
+//     cout<< "Result of the reverse number is : "  << result << endl;
+//     return 0;
+// }
+
+
+// Print N Fibonacci Numbers
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int n,first=0,second=1,third;
+//     cout << "Enter your number :";
+//     cin>>n;
+
+//     if(n<0){
+//     cout << "Enter Positive Number :";
+//     return 0;
+//     }
+
+//     cout<<first << " "<<second<< " ";
+
+//     for(int i=2;i<n;i++){
+//         third=first+second;
+//         cout<< third << " ";
+//         first=second;
+//         second=third;
 //     }
 //     return 0;
 // }

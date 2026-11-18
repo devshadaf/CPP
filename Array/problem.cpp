@@ -146,3 +146,84 @@ int main() {
     cout << "Item didn't found at any index";
     return 0;
 }
+
+
+// Print subArrays
+
+#include <iostream>
+using namespace std;
+
+void subarr(int *arr, int n){
+
+    for (int i = 0; i < n; i++){
+        for (int j = i; j < n; j++){
+            for (int s = i; s <= j; s++){
+                cout << arr[s];
+            }
+            cout << ", ";
+        }
+        cout << endl;
+    }
+};
+
+int main()
+{
+    int arr[5] = {1, 2, 3, 4, 5};
+    int length = sizeof(arr) / sizeof(arr[0]);
+    subarr(arr, length);
+    return 0;
+}
+
+
+// Print Max sumSubarray
+
+#include <iostream>
+using namespace std;
+
+void maxSubArray(int *arr, int n){
+    int maxSum = INT_MIN;
+
+    for (int i = 0; i < n; i++){
+        int currentSum = 0;
+        for (int j = i; j < n; j++){
+            currentSum += arr[j];
+            maxSum = max(currentSum, maxSum);
+            cout << currentSum << " ";
+        }
+        cout << endl;
+    }
+    cout << "Maximum sum of subarray : " << maxSum;
+};
+
+int main(){
+    int arr[6] = {1, -2, 5, -4, 7, 6};
+    int n = 6;
+    maxSubArray(arr, n);
+    return 0;
+}
+
+
+// Buy & Sell Stock
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int prices[6] = {7, 1, 5, 3, 6, 4};
+    int n = 6;
+
+    int bestBuy[100000];
+    bestBuy[0] = INT_MAX;
+    int profit = 0;
+
+    for (int i = 1; i < n; i++){
+        bestBuy[i] = min(bestBuy[i - 1], prices[i - 1]);
+    }
+
+    for (int i = 0; i < n; i++){
+        profit = max(profit, prices[i] - bestBuy[i]);
+    }
+
+    cout << "Maximum Profit is : " << profit;
+    return 0;
+}

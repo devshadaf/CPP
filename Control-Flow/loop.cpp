@@ -231,3 +231,24 @@
      }
      return 0;
  }
+
+
+ // Find the vlaue of one number raised to the  power of another [a^b]
+
+ #include <iostream>
+ using namespace std;
+ 
+ int main() {
+    int a,b,result=1;
+    cout << "Enter the Base Number :"<<endl;
+    cin >> a;
+    cout << "Enter the Power Number :" << endl;
+    cin >> b;
+
+    for(int i=1;i<=b;i++){
+        result*=a;
+    }
+
+    cout << "Result of " << a << "^"<< b << " is :" << result;
+    return 0;
+ }

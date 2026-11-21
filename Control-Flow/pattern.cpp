@@ -187,13 +187,10 @@
  #include <iostream>
  using namespace std;
 
- int main()
- {
-   for (int i = 1; i <= 5; i++)
-   {
+ int main(){
+   for (int i = 1; i <= 5; i++){
      bool val = (i % 2 != 0);
-     for (int j = 1; j <= i; j++)
-     {
+     for (int j = 1; j <= i; j++){
        cout << val;
        val = !val;
      }
@@ -213,11 +210,9 @@ GHIJ
  #include <iostream>
  using namespace std;
 
- int main()
- {
+ int main(){
    char ch = 'A';
-   for (int i = 1; i <= 4; i++)
-   {
+   for (int i = 1; i <= 4; i++){
      for (int j = 1; j <= i; j++){
        cout<<ch;
        ch+=1;
@@ -248,34 +243,28 @@ GHIJ
  
  int main() {
    // UP
-   for (int i = 1; i <= 5; i++)
-   {
+   for (int i = 1; i <= 5; i++){
      // Spaces
-     for (int j = 1; j <= 5 - i; j++)
-     {
-      // cout << " ";
+     for (int j = 1; j <= 5 - i; j++){
+       cout << " ";
      }
 
      // star
-     for (int j = 1; j <= i; j++)
-     {
+     for (int j = 1; j <= i; j++){
        cout << "* ";
      }
      cout << endl;
    }
 
    // DOWN
-   for (int i = 1; i <= 4; i++)
-   {
+   for (int i = 1; i <= 4; i++){
     //  Spaces
-     for (int j = 1; j <= i; j++)
-     {
+     for (int j = 1; j <= i; j++){
        cout << " ";
      }
 
      // Star
-     for (int j = 1; j <= 5-i; j++)
-     {
+     for (int j = 1; j <= 5-i; j++){
        cout << "* ";
      }
      cout << endl;
@@ -283,3 +272,174 @@ GHIJ
 
   return 0;
  }
+
+
+ /*
+
+  #  
+  #  
+#####
+  #  
+  #  
+
+ */
+
+ #include <iostream>
+ using namespace std;
+ 
+ int main() {
+  for(int i=0;i<5;i++){
+    for(int j=0;j<5;j++){
+      if(i==2 || j==2){
+        cout << "# ";
+      }
+      else{
+        cout << "  ";
+      }
+    }
+    cout << endl;
+  }
+  return 0;
+ }
+
+
+ // Star Cross Print 
+/*
+
+*   *
+ * * 
+  *  
+ * * 
+*   *
+
+*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  for(int i=1;i<=5;i++){
+    for(int j=1;j<=5;j++){
+      if(j==i|| i+j==6){
+        cout << "* ";
+      }
+      else{
+        cout << "  ";
+      }
+    }
+    cout << endl;
+  }
+  return 0;
+}
+
+
+// Number Flipped Triangle
+/*
+    1
+   12
+  123
+ 1234
+12345
+
+*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  for(int i=1;i<6;i++){
+
+    // spaces
+    for(int j=5;j>i;j--){
+      cout << " ";
+    }
+
+    // digit
+    for(int k=1;k<=i;k++){
+      cout << k;
+    }
+    cout << endl;
+  }
+  return 0;
+}
+
+
+// Star pyramid
+/*
+
+   *
+  ***
+ *****
+*******
+
+*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n;
+  cout << "Enter Rows :";
+  cin >> n;
+  int star=1;
+
+  for(int i=1;i<5;i++){
+
+    // space
+     for(int j=1;j<=n-i;j++){
+      cout << " ";
+     }
+
+     // star
+     for (int j = 1; j <= star; j++){
+       cout << "* ";
+     }
+
+     star+=2;
+     cout << endl;
+  }
+  return 0;
+}
+
+
+// Number Bridge
+/*
+
+1234567
+123 567
+12   67
+1     7
+
+*/
+
+#include <iostream>
+using namespace std;
+
+int main(){
+  for (int i = 1; i < 8; i++){
+    cout << i;
+  }
+  cout << endl;
+
+  for (int i = 1; i <= 3; i++){
+    int a = 1;
+    for (int j = 1; j <= 3 - i + 1; j++){
+      cout << a;
+      a++;
+    }
+
+    for (int j = 1; j <= 2 * i - 1; j++){
+      cout << " ";
+      a++;
+    }
+
+    for (int j = 1; j <= 3 - i + 1; j++){
+      cout << a;
+      a++;
+    }
+
+    cout << endl;
+  }
+
+  return 0;
+}
